@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         private val URL_PATTERN = Pattern.compile(
-            "^https?://[a-zA-Z0-9\\-._~:/?#[\\]@!$&'()*+,;=]+$"
+            "^https?://[a-zA-Z0-9\\-._~:/?#\\[\\]@!$&'()*+,;=]+$"
         )
     }
 

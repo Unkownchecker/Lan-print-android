@@ -21,13 +21,19 @@ class UsbPrinterManager(private val context: Context) {
         private const val CONTROL_TIMEOUT_MS = 3000
         private const val BULK_TIMEOUT_MS = 15000
 
+        // USB recipient types (not defined in UsbConstants)
+        private const val USB_RECIP_DEVICE = 0x00
+        private const val USB_RECIP_INTERFACE = 0x01
+        private const val USB_RECIP_ENDPOINT = 0x02
+        private const val USB_RECIP_OTHER = 0x03
+
         // USB Printer Class Specification 1.1, section 4.2.1 GET_DEVICE_ID:
         // bmRequestType=0xA1 (IN | Class | Interface), bRequest=0,
         // wValue=configuration index, wIndex=(interface index << 8) | altSetting.
         // Response: 2-byte big-endian length (INCLUDING those 2 bytes) followed
         // by the ASCII IEEE-1284 device ID string.
         private const val GET_DEVICE_ID_REQUEST_TYPE =
-            UsbConstants.USB_DIR_IN or UsbConstants.USB_TYPE_CLASS or UsbConstants.USB_RECIP_INTERFACE
+            UsbConstants.USB_DIR_IN or UsbConstants.USB_TYPE_CLASS or USB_RECIP_INTERFACE
         private const val GET_DEVICE_ID_BREQUEST = 0
     }
 

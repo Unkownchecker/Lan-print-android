@@ -48,7 +48,7 @@ object XqxPrinter {
             )
 
             val args = arrayOf(
-                "-r1200x600",
+                "-r600x600",
                 "-g${geometry.widthPx}x${geometry.heightPx}",
                 "-p${geometry.paperCode}",
                 "-m1", // standard plain paper

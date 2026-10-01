@@ -2,7 +2,7 @@
 <resources>
     <!-- Exact HP vendor (0x03F0 = 1008 decimal) + product ID pairs for each
          supported model, sourced from foo2zjs's own hplj1000 hotplug
-         script rather than guessed -- avoids Android prompting for
+         script rather than guessed - avoids Android prompting for
          unrelated HP USB devices (mice, webcams, etc. share the same
          vendor ID). -->
     <usb-device vendor-id="1008" product-id="15639" /> <!-- P1005: 0x3d17 -->

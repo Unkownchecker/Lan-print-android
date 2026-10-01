@@ -55,8 +55,8 @@
     <string name="notification_printer_prefix">LAN Print — %s</string>
     <string name="print_job_printed">Print job printed</string>
     <string name="print_job_failed">Print job failed</string>
-    <string name="print_success">%s — printed%s</string>
-    <string name="print_failure">%s — failed to print%s</string>
+    <string name="print_success">%1$s — printed%2$s</string>
+    <string name="print_failure">%1$s — failed to print%2$s</string>
     <string name="on_printer"> on %s</string>
 
     <!-- Error messages -->

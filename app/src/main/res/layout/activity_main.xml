@@ -135,7 +135,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Enter this ID in the phone app's \"Anywhere\" tab. Anyone with this ID can print to you while this app is running — keep it private."
+                android:text="Enter this ID in the phone app&apos;s &quot;Anywhere&quot; tab. Anyone with this ID can print to you while this app is running — keep it private."
                 android:textColor="@color/inkSoft"
                 android:textSize="12sp"
                 android:layout_marginBottom="12dp" />

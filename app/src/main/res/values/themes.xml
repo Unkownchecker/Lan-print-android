@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.LanPrint" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/stamp</item>
+        <item name="colorPrimaryDark">@color/stampDark</item>
+        <item name="colorAccent">@color/stamp</item>
+        <item name="android:windowBackground">@color/paper</item>
+    </style>
+</resources>

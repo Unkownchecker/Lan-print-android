@@ -1,0 +1,18 @@
+*.iml
+.gradle/
+/local.properties
+.idea/
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+*.apk
+*.aab
+
+# Deliberately NOT ignored: gradle wrapper files -- but note this repo does
+# not commit gradlew/gradle-wrapper.jar; the CI workflow generates them at
+# build time (see .github/workflows/build.yml) rather than committing a
+# binary jar file. If you build locally instead of via CI, run:
+#   gradle wrapper --gradle-version 8.9
+# once, yourself, before using ./gradlew.

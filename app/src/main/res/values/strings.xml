@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LAN Print</string>
+
+    <!-- MainActivity -->
+    <string name="no_printer_connected">No printer connected</string>
+    <string name="load_firmware_btn">Load printer firmware file</string>
+    <string name="print_from_anywhere">PRINT FROM ANYWHERE</string>
+    <string name="relay_url_hint">https://your-relay.onrender.com</string>
+    <string name="save">Save</string>
+    <string name="not_set_up">Not set up</string>
+    <string name="your_pairing_id">YOUR PAIRING ID</string>
+    <string name="pairing_id_placeholder">——————</string>
+    <string name="copy_id">Copy ID</string>
+    <string name="regenerate">Regenerate</string>
+    <string name="next_connection_refresh">Next connection refresh: %s</string>
+    <string name="next_connection_refresh_soon">Next connection refresh: any moment now…</string>
+    <string name="pairing_instructions">Enter this ID in the phone app\'s \"Anywhere\" tab. Anyone with this ID can print to you while this app is running — keep it private.</string>
+    <string name="exempt_from_battery_optimization">Exempt from battery optimization</string>
+    <string name="recent_jobs">RECENT JOBS</string>
+    <string name="nothing_printed_yet">Nothing printed yet.</string>
+
+    <!-- Toast messages -->
+    <string name="please_enter_relay_url">Please enter a relay URL</string>
+    <string name="invalid_url_format">Invalid URL format. Use https://example.com</string>
+    <string name="relay_url_saved">Relay URL saved</string>
+    <string name="copied">Copied</string>
+    <string name="new_pairing_id_generated">New pairing ID generated</string>
+    <string name="firmware_loaded">Firmware loaded</string>
+    <string name="connect_printer_first">Connect a printer first, then load its firmware</string>
+    <string name="couldnt_read_file">Couldn\'t read that file: %s</string>
+    <string name="already_exempted_battery_opt">Already exempted from battery optimization</string>
+    <string name="usb_permission_denied">USB permission denied — plug the printer back in to try again.</string>
+
+    <!-- Status messages -->
+    <string name="connected_reachable_anywhere">Connected — reachable from anywhere</string>
+    <string name="connecting_to_relay">Connecting to relay…</string>
+    <string name="disconnected_retrying">Disconnected — retrying…</string>
+    <string name="waiting_for_usb_permission">Waiting for USB permission…</string>
+    <string name="connected_printer">Connected: %s</string>
+    <string name="connected_firmware_sent">Connected: %s (firmware sent)</string>
+    <string name="connected_no_firmware">Connected: %s — no firmware loaded yet, printing will likely fail until you load one (see README)</string>
+    <string name="firmware_upload_failed">Connected: %s — firmware upload failed, try reconnecting</string>
+    <string name="no_firmware_loaded">No firmware file loaded for %s (see README)</string>
+    <string name="firmware_ready">Firmware file ready, will send on next connect</string>
+    <string name="firmware_sent_connection">Firmware sent for this connection</string>
+
+    <!-- PrintServerService -->
+    <string name="notification_channel_status">LAN Print status</string>
+    <string name="notification_channel_jobs">LAN Print jobs</string>
+    <string name="notification_connected">Connected, ready to print</string>
+    <string name="notification_connecting">Connecting…</string>
+    <string name="notification_reconnecting">Reconnecting…</string>
+    <string name="notification_not_setup">Print from anywhere not set up</string>
+    <string name="notification_printer_prefix">LAN Print — %s</string>
+    <string name="print_job_printed">Print job printed</string>
+    <string name="print_job_failed">Print job failed</string>
+    <string name="print_success">%s — printed%s</string>
+    <string name="print_failure">%s — failed to print%s</string>
+    <string name="on_printer"> on %s</string>
+
+    <!-- Error messages -->
+    <string name="error_no_printer">No printer connected. Please connect your printer and try again.</string>
+    <string name="error_firmware_not_loaded">Firmware not loaded for %s. Load the firmware file first (see README).</string>
+    <string name="error_invalid_file_type">This printer only accepts PDF files. Convert your file to PDF and try again.</string>
+    <string name="error_usb_transfer">Failed to send data to the printer. Try reconnecting the printer.</string>
+    <string name="error_conversion_failed">Failed to convert the document for printing. The file may be corrupted.</string>
+    <string name="error_conversion_no_data">Failed to convert the document for printing. The file may be empty or corrupted.</string>
+    <string name="error_single_page_duplex">This file only has one page. Manual duplex requires at least 2 pages.</string>
+    <string name="error_job_expired">This print job has expired (20 minutes). Start again from the beginning.</string>
+    <string name="error_general">An error occurred: %s</string>
+</resources>

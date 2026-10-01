@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/paper">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LAN PRINT"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/usbStatusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No printer connected"
+            android:textColor="@color/inkSoft"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/firmwareStatusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="—"
+            android:textColor="@color/inkSoft"
+            android:textSize="12sp"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/loadFirmwareBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Load printer firmware file"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Print from anywhere card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/card"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PRINT FROM ANYWHERE"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:letterSpacing="0.05"
+                android:textColor="@color/inkSoft"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/relayUrlInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="https://your-relay.onrender.com"
+                android:inputType="textUri"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/saveRelayBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/statusText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Not set up"
+                android:textColor="@color/inkSoft"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="YOUR PAIRING ID"
+                android:textSize="11sp"
+                android:textColor="@color/inkSoft"
+                android:letterSpacing="0.05" />
+
+            <TextView
+                android:id="@+id/pairingIdText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="——————"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.15"
+                android:layout_marginBottom="12dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <Button
+                    android:id="@+id/copyIdBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Copy ID"
+                    android:layout_marginEnd="8dp" />
+
+                <Button
+                    android:id="@+id/regenerateIdBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Regenerate" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/countdownText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Next connection refresh: —"
+                android:textColor="@color/inkSoft"
+                android:textSize="12sp"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter this ID in the phone app's \"Anywhere\" tab. Anyone with this ID can print to you while this app is running — keep it private."
+                android:textColor="@color/inkSoft"
+                android:textSize="12sp"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/batteryOptBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Exempt from battery optimization" />
+
+        </LinearLayout>
+
+        <!-- Recent jobs -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/card"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RECENT JOBS"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:letterSpacing="0.05"
+                android:textColor="@color/inkSoft"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/jobsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nothing printed yet."
+                android:textColor="@color/inkSoft"
+                android:fontFamily="monospace"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

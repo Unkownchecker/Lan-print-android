@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="paper">#E9ECEE</color>
+    <color name="card">#FFFFFF</color>
+    <color name="ink">#1B1F23</color>
+    <color name="inkSoft">#565D66</color>
+    <color name="stamp">#B23A48</color>
+    <color name="stampDark">#8E2D39</color>
+    <color name="ok">#2F6F4E</color>
+</resources>

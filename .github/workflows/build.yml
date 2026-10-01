@@ -1,0 +1,43 @@
+name: Build APK
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install NDK and CMake
+        run: |
+          yes | sdkmanager --licenses || true
+          sdkmanager "ndk;26.1.10909125" "cmake;3.22.1"
+
+      # No gradle-wrapper.jar is committed to the repo -- it's a binary file
+      # that's awkward to hand-author correctly, so we generate it fresh
+      # here using the runner's own pre-installed Gradle, then use that
+      # wrapper for the actual build. This is equivalent to committing the
+      # wrapper yourself, just done at build time instead.
+      - name: Generate Gradle wrapper
+        run: gradle wrapper --gradle-version 8.9
+
+      - name: Build debug APK
+        run: ./gradlew assembleDebug --stacktrace
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: lan-print-debug-apk
+          path: app/build/outputs/apk/debug/app-debug.apk

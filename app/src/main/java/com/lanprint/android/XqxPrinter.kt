@@ -65,6 +65,7 @@ object XqxPrinter {
             if (rc != 0) return PrintError.ConversionFailed(rc).userFriendlyMessage
 
             val xqxBytes = xqxFile.readBytes()
+            android.util.Log.d("XqxPrinter", "XQX file size: ${xqxBytes.size} bytes")
             if (xqxBytes.isEmpty()) return PrintError.ConversionProducedNoData().userFriendlyMessage
 
             val ok = usbManager.sendBulkData(printer, xqxBytes)

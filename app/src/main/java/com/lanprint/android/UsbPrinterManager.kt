@@ -151,14 +151,21 @@ class UsbPrinterManager(private val context: Context) {
     /** Sends [data] to the printer's bulk OUT endpoint, chunked to a safe transfer size. */
     fun sendBulkData(printer: ConnectedPrinter, data: ByteArray): Boolean {
         if (data.isEmpty()) return true
+        android.util.Log.d("UsbPrinterManager", "Sending ${data.size} bytes to printer")
         val chunkSize = 16384
         var offset = 0
+        var totalSent = 0
         while (offset < data.size) {
             val len = minOf(chunkSize, data.size - offset)
             val sent = printer.connection.bulkTransfer(printer.outEndpoint, data, offset, len, BULK_TIMEOUT_MS)
-            if (sent < 0) return false
+            if (sent < 0) {
+                android.util.Log.e("UsbPrinterManager", "USB transfer failed at offset $offset")
+                return false
+            }
+            totalSent += sent
             offset += sent
         }
+        android.util.Log.d("UsbPrinterManager", "Successfully sent $totalSent bytes to printer")
         return true
     }
 
